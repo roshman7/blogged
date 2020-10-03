@@ -7,7 +7,7 @@ import time
 prices_list=[]
 
 def check_price():
-    url = 'https://www.amazon.in/Samsung-Galaxy-Ocean-128GB-Storage/dp/B07HGGYWL6/ref=sr_1_1?dchild=1&keywords=poco+x2&qid=1598001158&sr=8-1'
+    url = 'https://www.amazon.in/Samsung-Galaxy-Ocean-128GB-Storage/dp/B07HGGYWL6/ref=sr_1_1?dchild=1&keywords=poco+x2&qid=1598001158&sr=8-1' #add product url here.
     sauce= urllib.request.urlopen(url).read()
     soup = bs4.BeautifulSoup(sauce,"html.parser")
     prices = soup.find(id="priceblock_ourprice").get_text()
